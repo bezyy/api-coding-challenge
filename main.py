@@ -32,7 +32,7 @@ class Mood(Resource):
         return users[id]
 
     def get(self, id):
-        return users[id]["mood"]
+        return str(users[id]["mood"]) + " Current Streak: " + str(users[id]["streak"])
 
 
 api.add_resource(User, "/user/<string:id>/<string:password>")
